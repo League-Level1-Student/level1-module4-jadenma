@@ -1,10 +1,13 @@
 package _03_typing_tutor;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Date;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class TypingTutor implements KeyListener {
@@ -36,8 +39,27 @@ public class TypingTutor implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("you typed: " + e.getKeyChar());
+		if (currentLetter == e.getKeyChar()) {
+			System.out.println("Correct!");
+			panel.setBackground(Color.GREEN);
+		}
+		else {
+			panel.setBackground(Color.RED);
+		}
+		currentLetter = TypingTutorRunner.generateRandomLetter();
+		label.setText("" + currentLetter);
 	}
+	Date timeAtStart = new Date();
+    
+	private void showTypingSpeed(int numberOfCorrectCharactersTyped) {
+	    Date timeAtEnd = new Date();
+	    long gameDuration = timeAtEnd.getTime() - timeAtStart.getTime();
+	    long gameInSeconds = (gameDuration / 1000) % 60;
+	    double charactersPerSecond = ((double) numberOfCorrectCharactersTyped / (double) gameInSeconds);
+	    int charactersPerMinute = (int) (charactersPerSecond * 60);
+	    JOptionPane.showMessageDialog(null, "Your typing speed is " + charactersPerMinute + " characters per minute.");
+	} 
 
 	@Override
 	public void keyReleased(KeyEvent e) {
