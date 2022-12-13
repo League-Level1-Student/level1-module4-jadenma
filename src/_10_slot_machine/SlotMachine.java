@@ -114,6 +114,9 @@ public class SlotMachine implements ActionListener {
 			frame.repaint();
 			panel.repaint();
 			panel.revalidate();
+			if (randnum1 == randnum2 && randnum2 == randnum3) {
+				JOptionPane.showMessageDialog(null, "YOU WIN!!");
+			}
 		}
 		
 	}

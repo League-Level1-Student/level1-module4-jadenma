@@ -1,6 +1,7 @@
 package _11_lights_out;
 
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -25,12 +26,62 @@ public class LightsOut implements MouseListener {
 
 		/** PART 1. CREATE YOUR LIGHT BOARD **/
 		//1. Make your gamePanel a 5x5 grid with setLayout(new GridLayout(5, 5));
-		
+		setLayout(new GridLayout(5,5));
 		
 			//2. Add 25 JLabels to your gamePanel (these are your lights)
-
+		JLabel label1 = new JLabel();
+		JLabel label2 = new JLabel();
+		JLabel label3 = new JLabel();
+		JLabel label4 = new JLabel();
+		JLabel label5 = new JLabel();
+		JLabel label6 = new JLabel();
+		JLabel label7 = new JLabel();
+		JLabel label8 = new JLabel();
+		JLabel label9 = new JLabel();
+		JLabel label10 = new JLabel();
+		JLabel label11 = new JLabel();
+		JLabel label12 = new JLabel();
+		JLabel label13 = new JLabel();
+		JLabel label14 = new JLabel();
+		JLabel label15 = new JLabel();
+		JLabel label16 = new JLabel();
+		JLabel label17 = new JLabel();
+		JLabel label18 = new JLabel();
+		JLabel label19 = new JLabel();
+		JLabel label20 = new JLabel();
+		JLabel label21 = new JLabel();
+		JLabel label22 = new JLabel();
+		JLabel label23 = new JLabel();
+		JLabel label24 = new JLabel();
+		JLabel label25 = new JLabel();
+		gamePanel.add(label1);
+		gamePanel.add(label2);
+		gamePanel.add(label3);
+		gamePanel.add(label4);
+		gamePanel.add(label5);
+		gamePanel.add(label6);
+		gamePanel.add(label7);
+		gamePanel.add(label8);
+		gamePanel.add(label9);
+		gamePanel.add(label10);
+		gamePanel.add(label11);
+		gamePanel.add(label12);
+		gamePanel.add(label13);
+		gamePanel.add(label14);
+		gamePanel.add(label15);
+		gamePanel.add(label16);
+		gamePanel.add(label17);
+		gamePanel.add(label18);
+		gamePanel.add(label19);
+		gamePanel.add(label20);
+		gamePanel.add(label21);
+		gamePanel.add(label22);
+		gamePanel.add(label23);
+		gamePanel.add(label24);
+		gamePanel.add(label25);
+		
 			//3. Use setText() to add a position number to each light (0-24).
-
+		label1.setText("0");
 			//4. Set the background of each light to LIGHT_GRAY
 			// - you will also have to set the background to opaque.
 			// - Use light.setOpaque(true);
